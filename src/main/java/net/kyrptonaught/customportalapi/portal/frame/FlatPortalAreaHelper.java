@@ -149,8 +149,8 @@ public class FlatPortalAreaHelper extends PortalFrameTester {
     @Override
     public Vec3d getEntityOffsetInPortal(BlockLocating.Rectangle arg, Entity entity, Direction.Axis portalAxis) {
         EntityDimensions entityDimensions = entity.getDimensions(entity.getPose());
-        double xSize = arg.width - entityDimensions.width;
-        double zSize = arg.height - entityDimensions.width;
+        double xSize = arg.width - entityDimensions.width();
+        double zSize = arg.height - entityDimensions.width();
 
         double deltaX = MathHelper.getLerpProgress(entity.getX(), arg.lowerLeft.getX(), arg.lowerLeft.getX() + xSize);
         double deltaZ = MathHelper.getLerpProgress(entity.getZ(), arg.lowerLeft.getZ(), arg.lowerLeft.getZ() + zSize);
@@ -161,8 +161,8 @@ public class FlatPortalAreaHelper extends PortalFrameTester {
     @Override
     public TeleportTarget getTPTargetInPortal(BlockLocating.Rectangle portalRect, Direction.Axis portalAxis, Vec3d prevOffset, Entity entity) {
         EntityDimensions entityDimensions = entity.getDimensions(entity.getPose());
-        double xSize = portalRect.width - entityDimensions.width;
-        double zSize = portalRect.height - entityDimensions.width;
+        double xSize = portalRect.width - entityDimensions.width();
+        double zSize = portalRect.height - entityDimensions.width();
 
         double x = MathHelper.lerp(prevOffset.x, portalRect.lowerLeft.getX(), portalRect.lowerLeft.getX() + xSize);
         double y = MathHelper.lerp(prevOffset.y, portalRect.lowerLeft.getY() - 1, portalRect.lowerLeft.getY() + 1);

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "customportalapi",
-  "version": "0.0.1-beta65-1.20.4",
+  "version": "0.0.1-beta65-1.20.5",
   "name": "Custom Portal Api",
   "description": "Create portals out of anything!",
   "authors": [
@@ -34,6 +34,6 @@
   "depends": {
     "fabricloader": ">=0.14.5",
     "fabric": "*",
-    "java": ">=17"
+    "java": ">=21"
   }
 }

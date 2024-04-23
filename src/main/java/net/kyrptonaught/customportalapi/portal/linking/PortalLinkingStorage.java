@@ -4,6 +4,7 @@ import net.minecraft.datafixer.DataFixTypes;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtList;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.PersistentState;
@@ -23,7 +24,7 @@ public class PortalLinkingStorage extends PersistentState {
         return new Type<>(PortalLinkingStorage::new, PortalLinkingStorage::fromNbt, DataFixTypes.LEVEL);
     }
 
-    public static PortalLinkingStorage fromNbt(NbtCompound tag) {
+    public static PortalLinkingStorage fromNbt(NbtCompound tag, RegistryWrapper.WrapperLookup registryLookup) {
         PortalLinkingStorage cman = new PortalLinkingStorage();
         NbtList links = (NbtList) tag.get("portalLinks");
 
@@ -35,7 +36,7 @@ public class PortalLinkingStorage extends PersistentState {
         return cman;
     }
 
-    public NbtCompound writeNbt(NbtCompound tag) {
+    public NbtCompound writeNbt(NbtCompound tag, RegistryWrapper.WrapperLookup registryLookup) {
         NbtList links = new NbtList();
         portalLinks.keys().asIterator().forEachRemaining(dimKey -> {
             portalLinks.get(dimKey).forEach((blockPos, dimensionalBlockPos) -> {
