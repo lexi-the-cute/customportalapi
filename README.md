@@ -18,7 +18,7 @@ Library mod allowing developers to easily create portals to their custom dimensi
 | **1.20.2** | ![Maven metadata URL](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fs3.us-east-2.amazonaws.com%2Fmaven.kyrptonaught.dev%2Fnet%2Fkyrptonaught%2Fcustomportalapi%2Fmaven-metadata.xml&style=for-the-badge&versionSuffix=-1.20.2) |
 | **1.20.4** | ![Maven metadata URL](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fs3.us-east-2.amazonaws.com%2Fmaven.kyrptonaught.dev%2Fnet%2Fkyrptonaught%2Fcustomportalapi%2Fmaven-metadata.xml&style=for-the-badge&versionSuffix=-1.20.4) |
 | **1.20.5** | ![Maven metadata URL](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fs3.us-east-2.amazonaws.com%2Fmaven.kyrptonaught.dev%2Fnet%2Fkyrptonaught%2Fcustomportalapi%2Fmaven-metadata.xml&style=for-the-badge&versionSuffix=-1.20.5) |
-| **1.20.5** | ![Maven metadata URL](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fs3.us-east-2.amazonaws.com%2Fmaven.kyrptonaught.dev%2Fnet%2Fkyrptonaught%2Fcustomportalapi%2Fmaven-metadata.xml&style=for-the-badge&versionSuffix=-1.20.5) |
+| **1.20.6** | ![Maven metadata URL](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fs3.us-east-2.amazonaws.com%2Fmaven.kyrptonaught.dev%2Fnet%2Fkyrptonaught%2Fcustomportalapi%2Fmaven-metadata.xml&style=for-the-badge&versionSuffix=-1.20.6) |
 
 Add the repository to your build.gradle.
 ```java
