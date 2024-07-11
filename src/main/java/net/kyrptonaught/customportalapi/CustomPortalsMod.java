@@ -65,8 +65,13 @@ public class CustomPortalsMod implements ModInitializer {
         //CustomPortalBuilder.beginPortal().frameBlock(Blocks.EMERALD_BLOCK).lightWithWater().destDimID(new Identifier("the_end")).tintColor(25, 76, 156).flatPortal().registerPortal();
     }
 
+    public static void log(String message) {
+        System.out.println("[" + MOD_ID + "]: " + message);
+    }
+
+
     public static void logError(String message) {
-        System.out.println("[" + MOD_ID + "]ERROR: " + message);
+        System.out.println("[" + MOD_ID + "] ERROR: " + message);
     }
 
     public static Block getDefaultPortalBlock() {

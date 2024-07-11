@@ -64,6 +64,11 @@ public class CustomTeleporter {
         BlockLocating.Rectangle fromPortalRectangle = portalFrameTesterFactory.createInstanceOfPortalFrameTester().init(entity.getEntityWorld(), enteredPortalPos, portalAxis, frameBlock).getRectangle();
         DimensionalBlockPos destinationPos = CustomPortalsMod.portalLinkingStorage.getDestination(fromPortalRectangle.lowerLeft, entity.getEntityWorld().getRegistryKey());
 
+        CustomPortalsMod.log(String.format("Destination Pos: %s", destinationPos.pos));
+        if (destinationPos != null) {
+            CustomPortalsMod.log(String.format("Destination Pos Dimension Type: %s - Destination World: %s", destinationPos.dimensionType, destinationWorld.getRegistryKey().getValue()));
+        }
+
         if (destinationPos != null && destinationPos.dimensionType.equals(destinationWorld.getRegistryKey().getValue())) {
             PortalFrameTester portalFrameTester = portalFrameTesterFactory.createInstanceOfPortalFrameTester().init(destinationWorld, destinationPos.pos, portalAxis, frameBlock);
             if (portalFrameTester.isValidFrame()) {
